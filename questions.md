@@ -35,4 +35,5 @@ Please help by filling the below in
 ### Kotlin
 
  - Identify: Users identify Cancellation using the ['CancellationException'](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-cancellation-exception/index.html)
- - Do different types of cancellation: There is the general cancellation and the inherit exception of ['TimeoutCancellationException'](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-timeout-cancellation-exception/index.html)
+  - This is part of the coroutine itself (coroutines and not actions inside them are cancelled). 
+  - Do different types of cancellation: There is the general cancellation and the inherit exception of ['TimeoutCancellationException'](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-timeout-cancellation-exception/index.html)
