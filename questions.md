@@ -22,7 +22,9 @@ Please help by filling the below in
 ### Go
 
 ### Rust
-
+ - Identify: Cancellation cannot be easily identified and is not exceptional. In Rust, cancellation is facilitated by [`drop`](https://doc.rust-lang.org/std/ops/trait.Drop.html)ping the future - users do not cancel explicitly and RAII is used to collect resources. There is currently _no way_ to do asynchronous cleanup in rust ("async drop") and cancellation has to be fully synchronous. There are no exceptions and cancellation is not an error - it's like deallocating the async function.
+   - This is a problem if you need to do asynchronous cleanup when cancelling. This is not a property of RAII but a property of Rust (C++ code for example which also faciliates RAII uses [cancellation_token](https://github.com/lewissbaker/cppcoro#Cancellation))
+ 
 ### Haskell
 
 ### C++
