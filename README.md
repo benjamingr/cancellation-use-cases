@@ -10,6 +10,11 @@ The goal is to provide feedback to Node.js, WHATWG and TC39 in order to converge
  2. [Worker-Queue cancellation](use-cases/02-worker-queue-cancellation.md)
  3. [High Throughput TCP server](use-cases/03-high-thoughput-server.md)
  4. [CLI tool](use-cases/04-cli-tool.md)
+ 5. [Service in a large node codebase](use-cases/05-service-in-a-large.md)
+
+### Questions to answer
+
+See the [questions document](questions.md) for what we'll want to try and answer.
 
 ### Contributing
 
