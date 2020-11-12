@@ -28,3 +28,6 @@ Please help by filling the below in
 ### Haskell
 
 ### C++
+
+ - Identify: Like Rust, C++ async code uses RAII primarily for resource management and cancellation. C++ is also considering a [`co_using`](https://github.com/lewissbaker/papers/issues/4) concept for async RAII. C++ uses [cancelation_token](https://github.com/lewissbaker/cppcoro#Cancellation)s for explicit marking of cancelation (rather than just destructing like rust). The exception thrown is [`operation_cancelled`](https://github.com/lewissbaker/cppcoro#Cancellation). These constructs are not widely adopted in C++ land. 
+ - Different popular APIs don't actually support coroutines/async in C++ and libraries I've checked did not use `cancelation_token` or `operation_cancelled` in them.
