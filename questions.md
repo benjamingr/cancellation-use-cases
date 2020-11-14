@@ -17,6 +17,8 @@ Please help by filling the below in
      - [Redis](https://github.com/StackExchange/StackExchange.Redis/blob/b0f21d3616c795ad994dd4151a5a556e9d1558b3/tests/StackExchange.Redis.Tests/AggresssiveTests.cs#L50)
 ### Python
 
+- Identify: Users can identify cancellation using [asyncio.CancelledError](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError) exception. This is in the language level, so it would corespond to a feature in JS relevant to this.
+- On sanic, which is an async framework for the web, kind of similar to nodejs, one can use [sanic.exceptions.abort](https://sanic.readthedocs.io/en/latest/sanic/api_reference.html#sanic.exceptions.abort) that can signal the user of the framework that the operation was cancelled. At least originaly used for aborting the process (using this to abort the login, here is the issue that caused this feature (https://github.com/huge-success/sanic/issues/739) and the discussion on the feature (https://github.com/huge-success/sanic/pull/740)
 ### Java
 
 ### Go
