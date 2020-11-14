@@ -21,6 +21,11 @@ Please help by filling the below in
 
 ### Go
 
+- Identify: Cancellation can be identified by providing [`context.Context`](https://golang.org/pkg/context/) to
+a library (this is kind of standard, however, some libraries doesn't support context as argument and instead will get a channel that may be closed to signal cancellation). When cancelling a context, user can check if the `ctx.Err()` equals `context.Cancelled` or `context.DeadlineExceeded`.
+- By default, SIGINT (or any other terminating signal) won't cancel running contexts, instead the user should 
+catch a signal in a dedicated goroutine and cancel the root context (user is responsible to create root context and pass child contexts). Usually there is no reason to what caused the cancel
+
 ### Rust
  - Identify: Cancellation cannot be easily identified and is not exceptional. In Rust, cancellation is facilitated by [`drop`](https://doc.rust-lang.org/std/ops/trait.Drop.html)ping the future - users do not cancel explicitly and RAII is used to collect resources. There is currently _no way_ to do asynchronous cleanup in rust ("async drop") and cancellation has to be fully synchronous. There are no exceptions and cancellation is not an error - it's like deallocating the async function.
    - This is a problem if you need to do asynchronous cleanup when cancelling. This is not a property of RAII but a property of Rust (C++ code for example which also faciliates RAII uses [cancellation_token](https://github.com/lewissbaker/cppcoro#Cancellation))
