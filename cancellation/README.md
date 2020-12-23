@@ -12,6 +12,7 @@ There are several relatively common use cases where linked cancellation is benef
 
  - [Server and Request Cancellation](https://github.com/benjamingr/cancellation-use-cases/blob/main/use-cases/01-server-process-request.md)
  - [Authoring infrastructure libraries using AbortSignal/AbortController](https://github.com/benjamingr/cancellation-use-cases/blob/main/use-cases/06-in-an-observable-type-library.md)
+ - [Adding a service in a large app](https://github.com/benjamingr/cancellation-use-cases/blob/main/use-cases/05-service-in-a-large.md) already utilizing AbortController.
  
 ## What other ecosystems do about it
 
