@@ -8,8 +8,11 @@ TODO
 
 ## Use Cases the issue manifests in
 
-TODO
+There are several relatively common use cases where linked cancellation is beneficial and present:
 
+ - [Server and Request Cancellation](https://github.com/benjamingr/cancellation-use-cases/blob/main/use-cases/01-server-process-request.md)
+ - [Authoring infrastructure libraries using AbortSignal/AbortController](https://github.com/benjamingr/cancellation-use-cases/blob/main/use-cases/06-in-an-observable-type-library.md)
+ 
 ## What other ecosystems do about it
 
 TODO
